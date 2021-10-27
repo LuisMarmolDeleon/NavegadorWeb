@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+	  <NoWarn>NU1701</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Bunifu.UI.WinForms" Version="5.2.3" />
+    <PackageReference Include="CefSharp.WinForms" Version="94.4.110" />
+    <PackageReference Include="EasyTabs" Version="2.0.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.2.1" />
+    <PackageReference Include="MaterialSkin.2" Version="2.2.1" />
+    <PackageReference Include="MetroFramework" Version="1.2.0.3" />
+    <PackageReference Include="metroframework.runtime" Version="1.2.0.3" />
+    <PackageReference Include="PInvoke.User32" Version="0.7.104" />
+    <PackageReference Include="Svg" Version="3.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.2.3" />
+    <PackageReference Include="Win32Interop.Dwmapi" Version="1.0.1" />
+    <PackageReference Include="Win32Interop.FireDwmapiNet5" Version="0.0.0.1" />
+    <PackageReference Include="Win32Interop.FireUxtheme" Version="0.0.0.5" />
+    <PackageReference Include="Win32Interop.FireUxthemeNet5" Version="0.0.0.1" />
+    <PackageReference Include="Win32Interop.Gdi32" Version="1.0.1" />
+    <PackageReference Include="Win32Interop.Kernel32" Version="1.0.1" />
+    <PackageReference Include="Win32Interop.User32" Version="1.0.1" />
+    <PackageReference Include="Win32Interop.Uxtheme" Version="1.0.1" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
